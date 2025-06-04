@@ -1,0 +1,9 @@
+bunx --bun shadcn@latest init
+bunx --bun shadcn@latest add
+bunx --bun shadcn@latest add login-04
+bunx --bun shadcn@latest add dashboard-01
+
+
+bun add zod react-hook-form @hookform/resolvers
+bun add axios
+bun add query-string
