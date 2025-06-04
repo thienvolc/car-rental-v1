@@ -1,7 +1,16 @@
+import { mockCars } from '@/features/cars/mock';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function PaymentPage() {
+type PageProps = {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function PaymentPage({ params }: PageProps) {
+  const { id: carId } = await params;
+  const car = mockCars.find((car) => car.id.toString() === carId)!;
+
   return (
     //  <!-- Phần chính: Thanh toán -->
     <section className='container mx-auto py-12'>
@@ -13,15 +22,15 @@ export default function PaymentPage() {
             {/* <!-- Thông tin xe --> */}
             <div>
               <Image
-                src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
-                alt='Toyota Camry'
+                src={car.images[0]}
+                alt={car.name}
                 className='w-full h-48 object-cover rounded-lg mb-4'
                 width={200}
                 height={80}
               />
-              <p className='text-gray-800 font-semibold'>Toyota Camry</p>
+              <p className='text-gray-800 font-semibold'>{car.name}</p>
               <p className='text-gray-600'>Chủ xe: Nguyễn Văn A</p>
-              <p className='text-gray-600'>Địa điểm: Hà Nội</p>
+              <p className='text-gray-600'>Địa điểm: {car.location}</p>
               <p className='text-gray-600'>Ngày thuê: 15/06/2025 - 17/06/2025</p>
             </div>
             {/* <!-- Chi tiết thanh toán --> */}

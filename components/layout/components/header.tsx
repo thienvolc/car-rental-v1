@@ -1,16 +1,18 @@
 'use client';
-import { useContext, useState } from 'react';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Logo from '../../common/logo';
 import { Button } from '../../ui/button';
-import { AuthContext } from '@/features/auth/auth-context';
 import Image from 'next/image';
 import LogoutButton from '@/features/auth/components/logout-button';
 import { MenuIcon, XIcon } from 'lucide-react';
+import { useAuth } from '@/features/auth/hooks/use-auth';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { getCurrentUser } = useAuth();
+  const user = getCurrentUser();
 
   return (
     <header className='sticky top-0 z-50 w-full bg-orange-500 shadow-sm dark:bg-gray-800'>
@@ -36,7 +38,7 @@ export default function Header() {
                     href='/dashboard'
                   >
                     <Image
-                      src={user.imageUrl || '/avatar-placeholder.png'}
+                      src={user?.imageUrl || '/avatar-placeholder.png'}
                       alt={user?.name || 'Avatar người dùng'}
                       width={32}
                       height={32}
@@ -51,8 +53,8 @@ export default function Header() {
               <div className='hidden md:flex items-center space-x-4'>
                 <Button
                   asChild
-                  variant={'ghost'}
-                  className='text-white hover:text-gray-200 transition-colors duration-200 font-medium'
+                  variant={'outline'}
+                  className='text-black bg-white transition-colors duration-200 font-medium'
                   aria-label='Đăng nhập'
                 >
                   <Link href='/login'>Đăng nhập</Link>

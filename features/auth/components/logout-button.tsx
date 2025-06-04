@@ -1,9 +1,8 @@
 import { useRouter } from 'next/navigation';
-import { useContext } from 'react';
-import { AuthContext } from '../auth-context';
+import { useAuth } from '../hooks/use-auth';
 
 export default function LogoutButton() {
-  const { logout } = useContext(AuthContext);
+  const { logout } = useAuth();
   const router = useRouter();
 
   const handleLogout = () => {

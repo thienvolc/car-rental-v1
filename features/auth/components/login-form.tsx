@@ -1,20 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { useContext } from 'react';
-import { AuthContext, AuthContextType } from '../auth-context';
-import { mockUser } from '../mock';
+import { useAuth } from '../hooks/use-auth';
+import { LoginSchema } from '../schema';
 
 export default function LoginForm() {
-  const { login } = useContext<AuthContextType>(AuthContext);
-  
+  const { login } = useAuth();
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const email = formData.get('email') as string;
-    const password = formData.get('password') as string;
-
-    login({ email, password } as any); // Giả lập đăng nhập với mock user
+    const userCredential = Object.fromEntries(formData.entries()) as LoginSchema;
+    login(userCredential);
   }
 
   return (

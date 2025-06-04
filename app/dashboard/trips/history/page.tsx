@@ -1,7 +1,10 @@
+import { mockCars } from "@/features/cars/mock";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function TripHistoryPage() {
+  const car = mockCars;
+
   return (
     // <!-- Phần chính: Lịch sử thuê xe -->
     <section className='container mx-auto py-12'>
@@ -30,7 +33,7 @@ export default function TripHistoryPage() {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={car[0].images[0]}
                   alt='Toyota Camry'
                   className='w-full h-32 object-cover rounded-lg'
                   width={200}
@@ -38,7 +41,7 @@ export default function TripHistoryPage() {
                 />
               </div>
               <div>
-                <p className='text-gray-800 font-semibold'>Toyota Camry</p>
+                <p className='text-gray-800 font-semibold'>{car[0].name}</p>
                 <p className='text-gray-600'>Chủ xe: Nguyễn Văn A</p>
                 <p className='text-gray-600'>Địa điểm: Hà Nội</p>
               </div>
@@ -59,13 +62,15 @@ export default function TripHistoryPage() {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1580273916550-ebd7d5c9e8b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={car[1].images[0]}
                   alt='Honda CR-V'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div>
-                <p className='text-gray-800 font-semibold'>Honda CR-V</p>
+                <p className='text-gray-800 font-semibold'>{car[1].name}</p>
                 <p className='text-gray-600'>Chủ xe: Trần Thị B</p>
                 <p className='text-gray-600'>Địa điểm: TP.HCM</p>
               </div>
@@ -84,13 +89,15 @@ export default function TripHistoryPage() {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={car[2].images[0]}
                   alt='Hyundai Tucson'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div>
-                <p className='text-gray-800 font-semibold'>Hyundai Tucson</p>
+                <p className='text-gray-800 font-semibold'>{car[2].name}</p>
                 <p className='text-gray-600'>Chủ xe: Lê Văn C</p>
                 <p className='text-gray-600'>Địa điểm: Đà Nẵng</p>
               </div>

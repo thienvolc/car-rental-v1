@@ -1,8 +1,11 @@
 'use client';
 
+import { mockCars } from "@/features/cars/mock";
 import Image from "next/image";
 
 export default function ReviewPage() {
+  const cars = mockCars;
+
   function handleReviewSubmit(event: React.FormEvent) {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
@@ -61,14 +64,14 @@ export default function ReviewPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
               <Image
-                src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+                src={cars[0].images[0]}
                 alt='Toyota Camry'
                 className='w-16 h-16 object-cover rounded-lg mr-4'
                 width={100}
                 height={80}
               />
               <div>
-                <p className='text-gray-800 font-semibold'>Toyota Camry</p>
+                <p className='text-gray-800 font-semibold'>{cars[0].name}</p>
                 <p className='text-gray-600'>Ngày thuê: 15/05/2025 - 17/05/2025</p>
               </div>
             </div>
@@ -80,12 +83,14 @@ export default function ReviewPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
               <Image
-                src='https://images.unsplash.com/photo-1580273916550-ebd7d5c9e8b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+                src={cars[1].images[0]}
                 alt='Honda CR-V'
                 className='w-16 h-16 object-cover rounded-lg mr-4'
+                width={100}
+                height={80}
               />
               <div>
-                <p className='text-gray-800 font-semibold'>Honda CR-V</p>
+                <p className='text-gray-800 font-semibold'>{cars[1].name}</p>
                 <p className='text-gray-600'>Ngày thuê: 20/05/2025 - 22/05/2025</p>
               </div>
             </div>
@@ -97,12 +102,14 @@ export default function ReviewPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
               <Image
-                src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+                src={cars[2].images[0]}
                 alt='Hyundai Tucson'
                 className='w-16 h-16 object-cover rounded-lg mr-4'
+                width={100}
+                height={80}
               />
               <div>
-                <p className='text-gray-800 font-semibold'>Hyundai Tucson</p>
+                <p className='text-gray-800 font-semibold'>{cars[2].name}</p>
                 <p className='text-gray-600'>Ngày thuê: 10/05/2025 - 12/05/2025</p>
               </div>
             </div>

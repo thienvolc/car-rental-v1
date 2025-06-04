@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
 
-import { AuthProvider } from '@/features/auth/auth-context';
+import { AuthProvider } from '@/features/auth/hooks/use-auth';
 
 const dmSans = DM_Sans({
   variable: '--font-dm-sans',

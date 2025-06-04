@@ -1,6 +1,12 @@
+'use client';
+
+import { useAuth } from "@/features/auth/hooks/use-auth";
 import Image from "next/image";
 
 export default function UserProfilePage() {
+  const { getCurrentUser } = useAuth();
+  const user = getCurrentUser()! || { name: "", role: "" };
+
   return (
     // <!-- Phần chính: Hồ sơ cá nhân -->
     <section className='pl-6 container mx-auto py-12'>
@@ -16,8 +22,8 @@ export default function UserProfilePage() {
               height={80}
             />
             <div>
-              <h2 className='text-2xl font-bold text-gray-800'>Nguyễn Văn A</h2>
-              <p className='text-gray-600'>Khách thuê & Chủ xe</p>
+              <h2 className='text-2xl font-bold text-gray-800'>{user.name}</h2>
+              <p className='text-gray-600'>{user.role}</p>
             </div>
           </div>
           <div className='space-y-4'>
@@ -25,7 +31,7 @@ export default function UserProfilePage() {
               <label className='block text-gray-700 mb-1'>Email</label>
               <input
                 type='email'
-                value='nguyen.van.a@aurent.com'
+                value={user.email}
                 className='w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500'
                 readOnly
               />
@@ -77,7 +83,7 @@ export default function UserProfilePage() {
                   </div>
                   <span className='text-yellow-500 font-semibold'>Đang chờ xác nhận</span>
                 </div>
-              </div>
+              </div>  
             </div>
           </div>
 

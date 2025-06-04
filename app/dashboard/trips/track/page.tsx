@@ -1,6 +1,9 @@
+import { mockCars } from "@/features/cars/mock";
 import Image from "next/image";
 
 export default function TrackTripPage() {
+  const cars = mockCars;
+
   return (
     // <!-- Phần chính: Trạng thái đơn / Giao nhận xe -->
     <section className='container mx-auto py-12'>
@@ -31,7 +34,7 @@ export default function TrackTripPage() {
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={cars[0].images[0]}
                   alt='Toyota Camry'
                   className='w-full h-32 object-cover rounded-lg'
                   width={200}
@@ -39,7 +42,7 @@ export default function TrackTripPage() {
                 />
               </div>
               <div className='md:col-span-2'>
-                <p className='text-gray-800 font-semibold'>Toyota Camry</p>
+                <p className='text-gray-800 font-semibold'>{cars[0].name}</p>
                 <p className='text-gray-600'>Mã đơn: #12345</p>
                 <p className='text-gray-600'>Chủ xe: Nguyễn Văn A</p>
                 <p className='text-gray-600'>Ngày thuê: 15/06/2025 - 17/06/2025</p>
@@ -93,7 +96,7 @@ export default function TrackTripPage() {
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={cars[1].images[0]}
                   alt='Hyundai Tucson'
                   className='w-full h-32 object-cover rounded-lg'
                   width={200}
@@ -101,7 +104,7 @@ export default function TrackTripPage() {
                 />
               </div>
               <div className='md:col-span-2'>
-                <p className='text-gray-800 font-semibold'>Hyundai Tucson</p>
+                <p className='text-gray-800 font-semibold'>{cars[1].name}</p>
                 <p className='text-gray-600'>Mã đơn: #12346</p>
                 <p className='text-gray-600'>Chủ xe: Lê Văn C</p>
                 <p className='text-gray-600'>Ngày thuê: 10/06/2025 - 12/06/2025</p>
@@ -155,7 +158,7 @@ export default function TrackTripPage() {
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
                 <Image
-                  src='https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+                  src={cars[2].images[0]}
                   alt='Mazda CX-5'
                   className='w-full h-32 object-cover rounded-lg'
                   width={200}
@@ -163,7 +166,7 @@ export default function TrackTripPage() {
                 />
               </div>
               <div className='md:col-span-2'>
-                <p className='text-gray-800 font-semibold'>Mazda CX-5</p>
+                <p className='text-gray-800 font-semibold'>{cars[2].name}</p>
                 <p className='text-gray-600'>Mã đơn: #12347</p>
                 <p className='text-gray-600'>Chủ xe: Phạm Thị D</p>
                 <p className='text-gray-600'>Ngày thuê: 05/06/2025 - 07/06/2025</p>
