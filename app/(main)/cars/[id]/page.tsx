@@ -1,8 +1,9 @@
+import { PageProps } from '@/.next/types/app/layout';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default async function CarPage({ params }: { params: { id: string } }) {
-  const { id: carId } = await params; // Lấy ID xe từ params
+
+export default function CarPage() {
   return (
     // <!-- Phần chính: Chi tiết xe -->
     <section className='container mx-auto py-12'>
@@ -55,7 +56,7 @@ export default async function CarPage({ params }: { params: { id: string } }) {
           </div>
           <button className='w-full bg-orange-500 text-white p-3 rounded-lg font-semibold'>
             {' '}
-            <Link href={`/carss/${carId}/bookings`}>Đặt xe ngay</Link>
+            <Link href={`/cars/123/bookings`}>Đặt xe ngay</Link>
           </button>
         </div>
       </div>
