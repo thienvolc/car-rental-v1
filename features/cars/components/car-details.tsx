@@ -129,7 +129,7 @@ export default function CarDetails({ carId }: { carId: string }) {
               <div className='flex items-center'>
                 <div className='w-12 h-12 bg-gray-300 rounded-full mr-3 overflow-hidden'>
                   <Image
-                    src='https://randomuser.me/api/portraits/men/32.jpg'
+                    src='/avatar-placeholder.png'
                     alt='Chủ xe'
                     width={48}
                     height={48}
@@ -173,14 +173,14 @@ export default function CarDetails({ carId }: { carId: string }) {
               rating: '★★★★☆',
               comment: 'Xe sạch sẽ, chủ xe thân thiện, giao xe đúng giờ.',
               date: '20/05/2025',
-              avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+              avatar: '/avatar-placeholder.png',
             },
             {
               name: 'Lê Văn C',
               rating: '★★★★★',
               comment: 'Trải nghiệm tuyệt vời, xe chạy êm, sẽ thuê lại!',
               date: '15/05/2025',
-              avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
+              avatar: '/avatar-placeholder.png',
             },
           ].map((review, index) => (
             <div key={index} className='flex space-x-4 pb-4 border-b border-gray-100'>
