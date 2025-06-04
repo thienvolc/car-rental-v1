@@ -1,16 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { Calendar, Car, DollarSign, MapPin, Menu, Settings, Star, Users, X } from 'lucide-react';
+import { Calendar, Car, DollarSign, Star } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import DashboardSidebar from '@/components/layout/components/dashboard-sidbar';
 
 export default function DashboardPage() {
-  const [period, setPeriod] = useState<'day' | 'week' | 'month' | 'year'>('month');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   // Mock data - replace with API calls in real implementation
   const overviewData = {
     totalBookings: 152,
@@ -60,12 +55,12 @@ export default function DashboardPage() {
     },
   ];
 
-  const cars = [
-    { id: 'C001', name: 'Toyota Camry', status: 'available', bookingRate: '85%', revenue: 25000000 },
-    { id: 'C002', name: 'Honda CR-V', status: 'rented', bookingRate: '92%', revenue: 30000000 },
-    { id: 'C003', name: 'Mazda CX-5', status: 'maintenance', bookingRate: '78%', revenue: 18000000 },
-    { id: 'C004', name: 'Hyundai Tucson', status: 'available', bookingRate: '81%', revenue: 20500000 },
-  ];
+  // const cars = [
+  //   { id: 'C001', name: 'Toyota Camry', status: 'available', bookingRate: '85%', revenue: 25000000 },
+  //   { id: 'C002', name: 'Honda CR-V', status: 'rented', bookingRate: '92%', revenue: 30000000 },
+  //   { id: 'C003', name: 'Mazda CX-5', status: 'maintenance', bookingRate: '78%', revenue: 18000000 },
+  //   { id: 'C004', name: 'Hyundai Tucson', status: 'available', bookingRate: '81%', revenue: 20500000 },
+  // ];
 
   return (
     <div className='flex flex-col md:flex-row bg-gray-50 min-h-screen'>

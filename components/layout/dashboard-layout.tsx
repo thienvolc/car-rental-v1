@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DashboardHeader from './components/dashboard-header';
 import DashboardSidebar from './components/dashboard-sidbar';
 
@@ -10,24 +10,6 @@ type DashboardLayoutProps = {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Phát hiện kích thước màn hình để xác định mobile/desktop
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Kiểm tra ban đầu
-    checkIfMobile();
-
-    // Kiểm tra khi resize
-    window.addEventListener('resize', checkIfMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
-  }, []);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);

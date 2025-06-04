@@ -53,10 +53,12 @@ export default function Home() {
           <h2 className='text-3xl font-bold text-gray-800 text-center mb-10'>Xe nổi bật</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6'>
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Toyota Camry'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Toyota Camry</h3>
@@ -70,10 +72,12 @@ export default function Home() {
               </div>
             </div>
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Honda CR-V'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Honda CR-V</h3>
@@ -87,10 +91,12 @@ export default function Home() {
               </div>
             </div>
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Hyundai Tucson'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Hyundai Tucson</h3>
@@ -104,10 +110,12 @@ export default function Home() {
               </div>
             </div>
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Mazda CX-5'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Mazda CX-5</h3>

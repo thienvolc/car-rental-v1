@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 export default function ReviewPage() {
   function handleReviewSubmit(event: React.FormEvent) {
     event.preventDefault();
@@ -58,10 +60,12 @@ export default function ReviewPage() {
           {/* <!-- Đánh giá 1 --> */}
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                 alt='Toyota Camry'
                 className='w-16 h-16 object-cover rounded-lg mr-4'
+                width={100}
+                height={80}
               />
               <div>
                 <p className='text-gray-800 font-semibold'>Toyota Camry</p>
@@ -75,7 +79,7 @@ export default function ReviewPage() {
           {/* <!-- Đánh giá 2 --> */}
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1580273916550-ebd7d5c9e8b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                 alt='Honda CR-V'
                 className='w-16 h-16 object-cover rounded-lg mr-4'
@@ -92,7 +96,7 @@ export default function ReviewPage() {
           {/* <!-- Đánh giá 3 --> */}
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='flex items-center mb-2'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                 alt='Hyundai Tucson'
                 className='w-16 h-16 object-cover rounded-lg mr-4'

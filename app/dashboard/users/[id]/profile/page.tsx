@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function UserProfilePage() {
   return (
     // <!-- Phần chính: Hồ sơ cá nhân -->
@@ -6,10 +8,12 @@ export default function UserProfilePage() {
         {/* <!-- Thông tin cá nhân và vai trò --> */}
         <div className='bg-white rounded-xl shadow-lg p-8'>
           <div className='flex items-center mb-6'>
-            <img
+            <Image
               src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
               alt='Avatar'
               className='w-24 h-24 rounded-full object-cover mr-4'
+              width={200}
+              height={80}
             />
             <div>
               <h2 className='text-2xl font-bold text-gray-800'>Nguyễn Văn A</h2>
@@ -82,10 +86,12 @@ export default function UserProfilePage() {
             <h3 className='text-xl font-bold text-gray-800 mb-4'>Quản lý xe của bạn</h3>
             <div className='space-y-4'>
               <div className='flex items-center border border-gray-200 rounded-lg p-4'>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Hyundai Tucson'
                   className='w-24 h-24 object-cover rounded-lg mr-4'
+                  width={200}
+                  height={80}
                 />
                 <div>
                   <p className='text-gray-800 font-semibold'>Hyundai Tucson</p>

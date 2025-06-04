@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function TripHistoryPage() {
   return (
     // <!-- Phần chính: Lịch sử thuê xe -->
@@ -26,10 +29,12 @@ export default function TripHistoryPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Toyota Camry'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div>
@@ -44,7 +49,7 @@ export default function TripHistoryPage() {
               </div>
               <div className='flex items-center justify-end'>
                 <button className='bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
-                  <a href='reviews'>Viết đánh giá</a>
+                  <Link href='reviews'>Viết đánh giá</Link>
                 </button>
               </div>
             </div>
@@ -53,7 +58,7 @@ export default function TripHistoryPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1580273916550-ebd7d5c9e8b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Honda CR-V'
                   className='w-full h-32 object-cover rounded-lg'
@@ -78,7 +83,7 @@ export default function TripHistoryPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Hyundai Tucson'
                   className='w-full h-32 object-cover rounded-lg'
@@ -96,7 +101,7 @@ export default function TripHistoryPage() {
               </div>
               <div className='flex items-center justify-end'>
                 <button className='bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
-                  <a href='/cars/123/bookings'>Đặt lại</a>
+                  <Link href='/cars/123/bookings'>Đặt lại</Link>
                 </button>
               </div>
             </div>

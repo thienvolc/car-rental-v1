@@ -1,6 +1,6 @@
 'use client';
 
-import { BarChart3, Calendar, Car, Clock, Home, MessageSquare, Settings, Star } from 'lucide-react';
+import { Calendar, Car, Home } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 

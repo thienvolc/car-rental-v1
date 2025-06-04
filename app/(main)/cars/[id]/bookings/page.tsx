@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function BookingPage() {
@@ -12,10 +12,12 @@ export default function BookingPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {/* <!-- Thông tin xe --> */}
             <div>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Toyota Camry'
                 className='w-full h-48 object-cover rounded-lg mb-4'
+                width={600}
+                height={480}
               />
               <p className='text-gray-600'>
                 <span className='font-semibold'>Loại xe:</span> Sedan

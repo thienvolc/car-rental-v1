@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function AdminUserDashboardPage() {
   return (
     <>
@@ -6,23 +9,25 @@ export default function AdminUserDashboardPage() {
         <div className='container mx-auto flex justify-between items-center'>
           <div className='text-3xl font-extrabold'>AuRent Admin</div>
           <div className='flex items-center space-x-8'>
-            <a href='/admin/dashboard' className='text-lg'>
+            <Link href='/admin/dashboard' className='text-lg'>
               Tổng quan
-            </a>
-            <a href='/admin/dashboard/users' className='text-lg font-semibold'>
+            </Link>
+            <Link href='/admin/dashboard/users' className='text-lg font-semibold'>
               Người dùng
-            </a>
-            <a href='#' className='text-lg'>
+            </Link>
+            <Link href='#' className='text-lg'>
               Xe
-            </a>
-            <a href='#' className='text-lg'>
+            </Link>
+            <Link href='#' className='text-lg'>
               Đơn thuê
-            </a>
+            </Link>
             <div className='flex items-center'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80'
                 alt='Admin Avatar'
                 className='w-10 h-10 rounded-full mr-2'
+                width={50}
+                height={50}
               />
               <span>Admin</span>
               <button className='ml-4 bg-gray-300 text-gray-800 px-3 py-1 rounded-lg'>Đăng xuất</button>
@@ -71,10 +76,12 @@ export default function AdminUserDashboardPage() {
               <tbody>
                 <tr className='border-b border-gray-200'>
                   <td className='p-4 flex items-center'>
-                    <img
+                    <Image
                       src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80'
                       alt='Avatar'
                       className='w-8 h-8 rounded-full mr-2'
+                      width={40}
+                      height={40}
                     />
                     Nguyễn Văn A
                   </td>
@@ -91,10 +98,12 @@ export default function AdminUserDashboardPage() {
                 </tr>
                 <tr className='border-b border-gray-200'>
                   <td className='p-4 flex items-center'>
-                    <img
+                    <Image
                       src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80'
                       alt='Avatar'
                       className='w-8 h-8 rounded-full mr-2'
+                      width={40}
+                      height={40}
                     />
                     Trần Thị B
                   </td>
@@ -111,10 +120,12 @@ export default function AdminUserDashboardPage() {
                 </tr>
                 <tr className='border-b border-gray-200'>
                   <td className='p-4 flex items-center'>
-                    <img
+                    <Image
                       src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80'
                       alt='Avatar'
                       className='w-8 h-8 rounded-full mr-2'
+                      width={40}
+                      height={40}
                     />
                     Lê Văn C
                   </td>
@@ -256,15 +267,15 @@ export default function AdminUserDashboardPage() {
         <div className='container mx-auto text-center'>
           <div className='text-2xl font-bold mb-4'>AuRent Admin</div>
           <div className='flex justify-center space-x-6 mb-4'>
-            <a href='#' className='text-white'>
+            <Link href='#' className='text-white'>
               Tổng quan
-            </a>
-            <a href='#' className='text-white'>
+            </Link>
+            <Link href='#' className='text-white'>
               Hỗ trợ
-            </a>
-            <a href='#' className='text-white'>
+            </Link>
+            <Link href='#' className='text-white'>
               Liên hệ
-            </a>
+            </Link>
           </div>
           <p className='text-sm'>© 2025 AuRent. Tất cả quyền được bảo lưu.</p>
           <p className='text-sm'>Liên hệ: admin@aurent.com | 0123 456 789</p>

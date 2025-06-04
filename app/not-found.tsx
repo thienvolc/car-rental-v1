@@ -1,4 +1,5 @@
 import { DM_Sans } from 'next/font/google';
+import Link from 'next/link';
 import React from 'react';
 
 const dmSans = DM_Sans({
@@ -24,12 +25,12 @@ const NotFoundPage = () => {
       <div className='text-center -mt-10'>
         <h3 className='text-2xl sm:text-3xl font-semibold mb-2'>Có vẻ như bạn đã đi lạc</h3>
         <p className='text-base sm:text-lg text-gray-600 mb-6'>Trang bạn đang tìm kiếm không có tồn tại!</p>
-        <a
+        <Link
           href='/'
           className='inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded hover:bg-indigo-700 transition'
         >
           Quay về trang chủ
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HomeTripPage() {
   return (
     // <!-- Phần chính: Quản lý đơn thuê xe -->
@@ -31,10 +33,12 @@ export default function HomeTripPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Toyota Camry'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div className='md:col-span-2'>
@@ -69,10 +73,12 @@ export default function HomeTripPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Hyundai Tucson'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div className='md:col-span-2'>
@@ -107,10 +113,12 @@ export default function HomeTripPage() {
           <div className='border border-gray-200 rounded-lg p-6'>
             <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
               <div>
-                <img
+                <Image
                   src='https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
                   alt='Mazda CX-5'
                   className='w-full h-32 object-cover rounded-lg'
+                  width={200}
+                  height={80}
                 />
               </div>
               <div className='md:col-span-2'>

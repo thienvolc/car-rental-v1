@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function AdminDashboardPage() {
   return (
     <>
@@ -6,23 +9,25 @@ export default function AdminDashboardPage() {
         <div className='container mx-auto flex justify-between items-center'>
           <div className='text-3xl font-extrabold'>AuRent Admin</div>
           <div className='flex items-center space-x-8'>
-            <a href='/admin/dashboard' className='text-lg'>
+            <Link href='/admin/dashboard' className='text-lg'>
               Tổng quan
-            </a>
-            <a href='/admin/dashboard/users' className='text-lg'>
+            </Link>
+            <Link href='/admin/dashboard/users' className='text-lg'>
               Người dùng
-            </a>
-            <a href='#' className='text-lg'>
+            </Link>
+            <Link href='#' className='text-lg'>
               Xe
-            </a>
-            <a href='#' className='text-lg'>
+            </Link>
+            <Link href='#' className='text-lg'>
               Đơn thuê
-            </a>
+            </Link>
             <div className='flex items-center'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80'
                 alt='Admin Avatar'
                 className='w-10 h-10 rounded-full mr-2'
+                width={50}
+                height={50}
               />
               <span>Admin</span>
               <button className='ml-4 bg-gray-300 text-gray-800 px-3 py-1 rounded-lg'>Đăng xuất</button>
@@ -39,34 +44,34 @@ export default function AdminDashboardPage() {
             <h3 className='text-lg font-bold text-gray-800 mb-4'>Điều hướng</h3>
             <ul className='space-y-2'>
               <li>
-                <a href='#' className='block text-orange-500 font-semibold py-2 px-4 rounded-lg bg-orange-100'>
+                <Link href='#' className='block text-orange-500 font-semibold py-2 px-4 rounded-lg bg-orange-100'>
                   Tổng quan
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
+                <Link href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
                   Quản lý người dùng
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
+                <Link href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
                   Quản lý xe
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
+                <Link href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
                   Quản lý đơn thuê
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
+                <Link href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
                   Thống kê
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
+                <Link href='#' className='block text-gray-600 py-2 px-4 rounded-lg'>
                   Cài đặt hệ thống
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -169,10 +174,12 @@ export default function AdminDashboardPage() {
               </div>
               <div className='space-y-4'>
                 <div className='border border-gray-200 rounded-lg p-4 flex items-center'>
-                  <img
+                  <Image
                     src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                     alt='Toyota Camry'
                     className='w-16 h-16 object-cover rounded-lg mr-4'
+                    width={100}
+                    height={80}
                   />
                   <div className='flex-1'>
                     <p className='text-gray-800 font-semibold'>Toyota Camry</p>
@@ -183,10 +190,12 @@ export default function AdminDashboardPage() {
                   <button className='text-red-500 ml-2'>Xóa</button>
                 </div>
                 <div className='border border-gray-200 rounded-lg p-4 flex items-center'>
-                  <img
+                  <Image
                     src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                     alt='Hyundai Tucson'
                     className='w-16 h-16 object-cover rounded-lg mr-4'
+                    width={100}
+                    height={80}
                   />
                   <div className='flex-1'>
                     <p className='text-gray-800 font-semibold'>Hyundai Tucson</p>
@@ -219,10 +228,12 @@ export default function AdminDashboardPage() {
               </div>
               <div className='space-y-4'>
                 <div className='border border-gray-200 rounded-lg p-4 flex items-center'>
-                  <img
+                  <Image
                     src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                     alt='Toyota Camry'
                     className='w-16 h-16 object-cover rounded-lg mr-4'
+                    width={100}
+                    height={80}
                   />
                   <div className='flex-1'>
                     <p className='text-gray-800 font-semibold'>Toyota Camry - #12345</p>
@@ -233,10 +244,12 @@ export default function AdminDashboardPage() {
                   <button className='text-red-500 ml-2'>Hủy</button>
                 </div>
                 <div className='border border-gray-200 rounded-lg p-4 flex items-center'>
-                  <img
+                  <Image
                     src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
                     alt='Hyundai Tucson'
                     className='w-16 h-16 object-cover rounded-lg mr-4'
+                    width={100}
+                    height={80}
                   />
                   <div className='flex-1'>
                     <p className='text-gray-800 font-semibold'>Hyundai Tucson - #12346</p>

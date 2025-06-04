@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function FindCarPage() {
   return (
     <section className='container mx-auto py-12'>
@@ -56,53 +59,65 @@ export default function FindCarPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {/* <!-- Xe 1 --> */}
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Toyota Camry'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Toyota Camry</h3>
                 <p className='text-gray-600'>Giá: 500.000 VNĐ/ngày</p>
                 <p className='text-gray-600'>Địa điểm: Hà Nội</p>
                 <p className='text-gray-600'>Loại xe: Sedan</p>
-                <a href='#' className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
+                <Link href='#' className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
                   Xem chi tiết
-                </a>
+                </Link>
               </div>
             </div>
             {/* <!-- Xe 2 --> */}
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1580273916550-ebd7d5c9e8b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Honda CR-V'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Honda CR-V</h3>
                 <p className='text-gray-600'>Giá: 700.000 VNĐ/ngày</p>
                 <p className='text-gray-600'>Địa điểm: TP.HCM</p>
                 <p className='text-gray-600'>Loại xe: SUV</p>
-                <a href='#' className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
+                <Link
+                  href='#'
+                  className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
+                >
                   Xem chi tiết
-                </a>
+                </Link>
               </div>
             </div>
             {/* <!-- Xe 3 --> */}
             <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-              <img
+              <Image
                 src='https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
                 alt='Hyundai Tucson'
                 className='w-full h-48 object-cover'
+                width={600}
+                height={480}
               />
               <div className='p-5'>
                 <h3 className='text-xl font-semibold text-gray-800'>Hyundai Tucson</h3>
                 <p className='text-gray-600'>Giá: 600.000 VNĐ/ngày</p>
                 <p className='text-gray-600'>Địa điểm: Đà Nẵng</p>
                 <p className='text-gray-600'>Loại xe: SUV</p>
-                <a href='#' className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'>
+                <Link
+                  href='#'
+                  className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
+                >
                   Xem chi tiết
-                </a>
+                </Link>
               </div>
             </div>
           </div>
