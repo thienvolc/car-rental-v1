@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'randomuser.me',
         pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-icons-png.flaticon.com',
+        pathname: '/512/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+        pathname: '/api/portraits/men/32.jpg',
       }
     ],
   },
