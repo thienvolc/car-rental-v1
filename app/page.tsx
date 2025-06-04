@@ -64,7 +64,7 @@ export default function Home() {
                 <h3 className='text-xl font-semibold text-gray-800'>Toyota Camry</h3>
                 <p className='text-gray-600'>Giá: 500.000 VNĐ/ngày</p>
                 <Link
-                  href='/car/123'
+                  href='/cars/123'
                   className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
                 >
                   Xem chi tiết
@@ -83,7 +83,7 @@ export default function Home() {
                 <h3 className='text-xl font-semibold text-gray-800'>Honda CR-V</h3>
                 <p className='text-gray-600'>Giá: 700.000 VNĐ/ngày</p>
                 <Link
-                  href='/car/123'
+                  href='/cars/123'
                   className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
                 >
                   Xem chi tiết
@@ -102,7 +102,7 @@ export default function Home() {
                 <h3 className='text-xl font-semibold text-gray-800'>Hyundai Tucson</h3>
                 <p className='text-gray-600'>Giá: 600.000 VNĐ/ngày</p>
                 <Link
-                  href='/car/123'
+                  href='/cars/123'
                   className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
                 >
                   Xem chi tiết
@@ -121,7 +121,7 @@ export default function Home() {
                 <h3 className='text-xl font-semibold text-gray-800'>Mazda CX-5</h3>
                 <p className='text-gray-600'>Giá: 650.000 VNĐ/ngày</p>
                 <Link
-                  href='/car/123'
+                  href='/cars/123'
                   className='mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold'
                 >
                   Xem chi tiết
